@@ -1,6 +1,4 @@
-Code book 
-=================
-
+## Code book 
 This document describes the variables, the data, and transformations that were performed to clean up the data before and during the 'run_analysis.R' script.
 =================
 ## Transformation steps
@@ -16,8 +14,8 @@ Create second tidy dataset that conforms to Wickham's 'tidy data' characteristic
 
 * STEP 4
 Writes out datasets created by run_analysis.R, 'merged_data.txt' and 'tidy_data.txt'
-===================
 
+===================
 ## Data sets
 The function `DeriveAndWriteDataSets` from the script `run_analysis.R` writes two datasets, `tidy1.csv` and `tidy2.csv`. The first one, `tidy1` is the result of a cleaning and selection of the data described in [Original data set](#original-data-set). The second one, `tidy2.csv` is the result of an aggregation of `tidy1.csv`.
 
