@@ -44,7 +44,7 @@ As a result:
 * variables beginning with 't' were changed to 'time_'
 * variables beginning with 'f' were changes to 'freq_'
 * dashes and parentheses were removed from variable names
-* instances of 'mean' or 'std' were changed to '_Mean_' or '_Std_'
+* instances of 'mean' or 'std' were changed to '\_Mean\_' or '\_Std\_'
 * BodyBody has been replaced by Body
 
 As an example the variable for mean time for body acceleration on the X axis:
