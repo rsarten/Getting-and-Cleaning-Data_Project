@@ -1,5 +1,5 @@
 ## Code book 
-This document describes the variables, the data, and transformations that were performed to clean up the data before and during the 'run_analysis.R' script.
+This document describes the data, transformations, and the variables that were performed and used to clean up the data before and during the 'run_analysis.R' script.
 
 =================
 ## The Data
@@ -7,18 +7,11 @@ This document describes the variables, the data, and transformations that were p
 
 =================
 ## Transformation steps
-'run_analysis.R' operates over 5 steps:
-* STEP 1
-Extract data from files, assign feature titles to columns and retain means and standard deviation feature tests. Creates 'Train' and 'Test' datasets.
-
-* STEP 2
-Merge Train and Test datasets and assign descriptive activity names.
-
-* STEP 3
-Create second tidy dataset that conforms to Hadley Wickham's 'tidy data' characteristics.
-
-* STEP 4
-Writes out datasets created by run_analysis.R, 'merged_data.txt' and 'tidy_data.txt'
+'run_analysis.R' operates over 4 steps:
+* STEP 1: Extract data from files, assign feature titles to columns and retain means and standard deviation feature tests. Creates 'Train' and 'Test' datasets.
+* STEP 2: Merge Train and Test datasets and assign descriptive activity names.
+* STEP 3: Create second tidy dataset that conforms to Hadley Wickham's 'tidy data' characteristics.
+* STEP 4: Writes out datasets created by run_analysis.R, 'merged_data.txt' and 'tidy_data.txt'
 
 ===================
 ## Data sets
