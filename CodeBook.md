@@ -3,7 +3,11 @@ This document describes the data, transformations, and the variables that were p
 
 =================
 ## The Data
+The data used in 'run_analysis.R' is collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
+The data for the project can be found at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The data comes from 30 subjects performing six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. The subjects are split into two sets, with 70% in the training set and 30% in the test data set.
 
 =================
 ## Transformation steps
@@ -14,21 +18,9 @@ This document describes the data, transformations, and the variables that were p
 * STEP 4: Writes out datasets created by run_analysis.R, 'merged_data.txt' and 'tidy_data.txt'
 
 ===================
-## Data sets
-The function `DeriveAndWriteDataSets` from the script `run_analysis.R` writes two datasets, `tidy1.csv` and `tidy2.csv`. The first one, `tidy1` is the result of a cleaning and selection of the data described in [Original data set](#original-data-set). The second one, `tidy2.csv` is the result of an aggregation of `tidy1.csv`.
-
-### Data set `tidy1.csv`
-
-The dataset `tidy1.csv` is the result of cleaning and selecting data from data from an experiment in which measurements were collected from the accelerometer and gyroscope from the Samsung Galaxy S smartphone used by 30 subjects carrying out a variety of 6 activities.
-More information about the measurements in the raw dataset is best obtained from the website where the dataset was taken from:
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-For your convenience we have included information about the original data in the section [Original data set](#original-data-set).
-
-Here follows a description of what `tidy1.csv` looks like.
-
-1. The first variable `subject` denotes the subject number that performed an activity. In total there are 30 subjects.
-2. The second variable `activity` denotes the activity performed by the subject. There are six activites, listed here:
-
+## Variables
+1. The variable 'subjects' denotes the subject number that performed an activity. In total there are 30 subjects.
+2. The second variable 'activity' denotes the possible activity performed by the subject from:
 * WALKING
 * WALKING_UPSTAIRS
 * WALKING_DOWNSTAIRS
@@ -36,14 +28,16 @@ Here follows a description of what `tidy1.csv` looks like.
 * STANDING
 * LAYING
 
-A total of 79 features were selected from the original data: only the estimated mean and standard deviations, using a `grep` on `"mean|std"`. These features form the 79 other variables in the dataset, making a total of 81 columns.
-The feature names from the original data have been rewritten, using the following rules:
+The raw data supplies 561 measurements for each observation of a subject in an activity. This is reduced in the datasetse in 'run_analysis.R' by selecting only the 79 columns that are measures of mean or standard deviation (std) for a measurement type. Variable names were supplied in the 'features.txt' file, those selected for inclusion were modified for readability based on information available in the 'features_info.txt':
 
-* The prefix `t` was rewritten into `time`, to make it clear the feature corresponds to the time domain
-* The prefix `f` was rewritten into `freq`, to make it clear the feature corresponds to the frequency domain
-* dashes and parentheses have been removed
+As a result:
+* variables beginning with 't' were changed to 'time_'
+* variables beginning with 'f' were changes to 'freq_'
+* dashes and parentheses were removed from variable names
+* instances of 'mean' or 'std' were changed to '_Mean_' or '_Std_'
 * BodyBody has been replaced by Body
-* CamelCasing has been applied to the names
+
+
 
 For example:
 
