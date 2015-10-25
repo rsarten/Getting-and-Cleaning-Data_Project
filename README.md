@@ -31,3 +31,14 @@ Data is collected from the accelerometers from the Samsung Galaxy S smartphone. 
 run_analysis.R requires the R packages 'dplyr' and 'tidyr' are installed for script to run.
 
 There is a supporting Codebook that details the transformation and variable information for 'run_analysis.R'.
+
+===================================
+## Instructions
+The instructions for using this data for the project are as follows:
+
+You should create one R script called run_analysis.R that does the following. 
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
