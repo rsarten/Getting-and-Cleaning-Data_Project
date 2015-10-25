@@ -11,14 +11,14 @@ library(dplyr)
 library(tidyr)
 
 # Extract generic and multi-use files and features
-features <- read.table("./features.txt", stringsAsFactors = F)[,2]
+features <- read.table("./UCI HAR Dataset/features.txt", stringsAsFactors = F)[,2]
 mean_std <- grep("mean|std|activityLabel",features) # Get col ids with means and std
-activities.list <- read.table("./activity_labels.txt")[,2]
+activities.list <- read.table("./UCI HAR Dataset/activity_labels.txt")[,2]
 
 # Extract and modify training files
-Train <- read.table("./train/X_train.txt")
-y_train <- read.table("./train/y_train.txt")[,1] # activity labels
-subject_train <- read.table("./train/subject_train.txt")[,1]
+Train <- read.table("./UCI HAR Dataset/train/X_train.txt")
+y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")[,1] # activity labels
+subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")[,1]
 
 names(Train) <- features
 Train <- Train[,mean_std]
@@ -26,9 +26,9 @@ Train$subjects <- subject_train
 Train$activity <- y_train
 
 # Extract and modify testing files
-Test <- read.table("./test/X_test.txt")
-y_test <- read.table("./test/y_test.txt")[,1] # activity labels
-subject_test <- read.table("./test/subject_test.txt")[,1]
+Test <- read.table("./UCI HAR Dataset/test/X_test.txt")
+y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")[,1] # activity labels
+subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")[,1]
 
 names(Test) <- features
 Test <- Test[,mean_std]
