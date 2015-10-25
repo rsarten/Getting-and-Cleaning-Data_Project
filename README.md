@@ -20,6 +20,10 @@ This script requires that the necessary files sit in the working directory in th
     │   └── X_train.txt
     │   └── y_train.txt    
 ```
+The files can be obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and have been extracted from the parent file '
+
+Data is collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 ===================================
 ## Dependencies
 run_analysis.R requires the R packages 'dplyr' and 'tidyr' are installed for script to run.
