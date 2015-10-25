@@ -50,10 +50,10 @@ The head and tail of the measurement variables included in the final datasets in
 ... ... ... ...
 
 * "freq_BodyGyroMag_Std_"
-* "freq_BodyGyroMagMeanFreq"
+* "freq_BodyGyroMag_Mean_"
 * "freq_BodyGyroJerkMag_Mean_"
 * "freq_BodyGyroJerkMag_Std_"
-* "freq_BodyGyroJerkMagMeanFreq"
+* "freq_BodyGyroJerkMag_Mean_"
 
 ==============================
 ### Output datasets
