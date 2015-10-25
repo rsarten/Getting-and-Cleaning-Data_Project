@@ -8,19 +8,21 @@ The script 'run_analysis.R' merges selected fields from two different datasets c
 ## File structure
 This script requires that the necessary files sit in the working directory in the following structure:
  ```
-    ├── run_analysis.R
-    ├── activity_labels.txt
-    ├── features.txt
-    ├── test
-    │   └── subject_test.txt
-    │   └── X_test.txt
-    │   └── y_test.txt 
-    ├── train
-    │   └── subject_train.txt
-    │   └── X_train.txt
-    │   └── y_train.txt    
+   ├── run_analysis.R
+   ├── UCI HDR Dataset
+   │   └── run_analysis.R
+   │   └── activity_labels.txt
+   │   └── features.txt
+   │   └── test
+   │       └── subject_test.txt
+   │       └── X_test.txt
+   │       └── y_test.txt 
+   │   └── train
+   │       └── subject_train.txt
+   │       └── X_train.txt
+   │       └── y_train.txt    
 ```
-The files can be obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and have been extracted from the parent file '
+The files can be obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and the parent file 'UCI HDR Dataset' has been placed in the R working directory.
 
 Data is collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
