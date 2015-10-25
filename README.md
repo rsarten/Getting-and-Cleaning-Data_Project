@@ -1,5 +1,5 @@
 ## Getting-and-Cleaning-Data_Project
-The primary script (run_analysis.R) produces two datasets
+The script 'run_analysis.R' merges selected fields from two different datasets containing information on accelerometers on Samsung mobile devices. The primary script (run_analysis.R) produces two datasets
  ```
     ├── merged_data.txt : merged dataset of mean and std variables for all subjects
     ├── tidy_data.txt : synthesised dataset that conforms to 'tidy data' structure
@@ -28,5 +28,4 @@ Data is collected from the accelerometers from the Samsung Galaxy S smartphone. 
 ## Dependencies
 run_analysis.R requires the R packages 'dplyr' and 'tidyr' are installed for script to run.
 
-
-Course Project for Getting and Cleaning Data Coursera (John Hopkins)
+There is a supporting Codebook that details the transformation and variable information for 'run_analysis.R'.
