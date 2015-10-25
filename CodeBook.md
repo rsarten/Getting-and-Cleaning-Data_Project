@@ -36,7 +36,9 @@ The second variable 'activity' denotes the possible activity performed by the su
 * STANDING
 * LAYING
 
-The raw data supplies 561 measurements for each observation of a subject in an activity. This is reduced in the datasetse in 'run_analysis.R' by selecting only the 79 columns that are measures of mean or standard deviation (std) for a measurement type. Variable names were supplied in the 'features.txt' file, those selected for inclusion were modified for readability based on information available in the 'features_info.txt':
+The raw data supplies 561 measurements for each observation of a subject in an activity. This is reduced in the datasetse in 'run_analysis.R' by selecting only the 79 columns that are measures of mean or standard deviation (std) for a measurement type. This has been decided by including any variable/feature name that includes the words 'mean' or 'std' in them.
+
+Variable names were supplied in the 'features.txt' file, those selected for inclusion were modified for readability based on information available in the 'features_info.txt':
 
 As a result:
 * variables beginning with 't' were changed to 'time_'
@@ -45,82 +47,21 @@ As a result:
 * instances of 'mean' or 'std' were changed to '_Mean_' or '_Std_'
 * BodyBody has been replaced by Body
 
-The measurement variables included in the final datasets are shown below. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions in which measurements were taken. More information on these variables can be found in 'features_info.txt'.
+As an example the variable for mean time for body acceleration on the X axis:
+"tBodyAcc-mean()-X" becomes "time_BodyAcc_Mean_X"
+
+The measurement variables included in the final datasets are shown below. '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions in which measurements were taken. More information on these variables can be found in 'features_info.txt' and this is a better resource than listing all features here.
+
+The first and last 5 measurement variables in the final datasets are:
 
 * "time_BodyAcc_Mean_X"
 * "time_BodyAcc_Mean_Y"
 * "time_BodyAcc_Mean_Z"
 * "time_BodyAcc_Std_X"
 * "time_BodyAcc_Std_Y"
-* "time_BodyAcc_Std_Z"
-* "time_GravityAcc_Mean_X"
-* "time_GravityAcc_Mean_Y"
-* "time_GravityAcc_Mean_Z"
-* "time_GravityAcc_Std_X"
-* "time_GravityAcc_Std_Y"
-* "time_GravityAcc_Std_Z"
-* "time_BodyAccJerk_Mean_X"
-* "time_BodyAccJerk_Mean_Y"
-* "time_BodyAccJerk_Mean_Z"
-* "time_BodyAccJerk_Std_X"
-* "time_BodyAccJerk_Std_Y"
-* "time_BodyAccJerk_Std_Z"
-* "time_BodyGyro_Mean_X"
-* "time_BodyGyro_Mean_Y"
-* "time_BodyGyro_Mean_Z"
-* "time_BodyGyro_Std_X"
-* "time_BodyGyro_Std_Y"
-* "time_BodyGyro_Std_Z"
-* "time_BodyGyroJerk_Mean_X"
-* "time_BodyGyroJerk_Mean_Y"
-* "time_BodyGyroJerk_Mean_Z"
-* "time_BodyGyroJerk_Std_X"
-* "time_BodyGyroJerk_Std_Y"
-* "time_BodyGyroJerk_Std_Z"
-* "time_BodyAccMag_Mean_"
-* "time_BodyAccMag_Std_"
-* "time_GravityAccMag_Mean_"
-* "time_GravityAccMag_Std_"
-* "time_BodyAccJerkMag_Mean_"
-* "time_BodyAccJerkMag_Std_"
-* "time_BodyGyroMag_Mean_"
-* "time_BodyGyroMag_Std_"
-* "time_BodyGyroJerkMag_Mean_"
-* "time_BodyGyroJerkMag_Std_"
-* "freq_BodyAcc_Mean_X"
-* "freq_BodyAcc_Mean_Y"
-* "freq_BodyAcc_Mean_Z"
-* "freq_BodyAcc_Std_X"
-* "freq_BodyAcc_Std_Y"
-* "freq_BodyAcc_Std_Z"
-* "freq_BodyAcc_Mean_X"
-* "freq_BodyAcc_Mean_Y"
-* "freq_BodyAcc_Mean_Z"
-* "freq_BodyAccJerk_Mean_X"
-* "freq_BodyAccJerk_Mean_Y"
-* "freq_BodyAccJerk_Mean_Z"
-* "freq_BodyAccJerk_Std_X"
-* "freq_BodyAccJerk_Std_Y"
-* "freq_BodyAccJerk_Std_Z"
-* "freq_BodyAccJerk_Mean_X"
-* "freq_BodyAccJerk_Mean_Y"
-* "freq_BodyAccJerk_Mean_Z"
-* "freq_BodyGyro_Mean_X"
-* "freq_BodyGyro_Mean_Y"
-* "freq_BodyGyro_Mean_Z"
-* "freq_BodyGyro_Std_X"
-* "freq_BodyGyro_Std_Y"
-* "freq_BodyGyro_Std_Z"
-* "freq_BodyGyro_Mean_X"
-* "freq_BodyGyro_Mean_Y"
-* "freq_BodyGyro_Mean_Z"
-* "freq_BodyAccMag_Mean_"
-* "freq_BodyAccMag_Std_"
-* "freq_BodyAccMag_Mean_"
-* "freq_BodyAccJerkMag_Mean_"
-* "freq_BodyAccJerkMag_Std_"
-* "freq_BodyAccJerkMag_Mean_"
-* "freq_BodyGyroMag_Mean_"
+
+...     ...     ...     ...
+
 * "freq_BodyGyroMag_Std_"
 * "freq_BodyGyroMag_Mean_"
 * "freq_BodyGyroJerkMag_Mean_"
