@@ -1,4 +1,10 @@
 ## Getting-and-Cleaning-Data_Project
+The primary script (run_analysis.R) produces two datasets
+ ```
+    ├── merged_data.txt : merged dataset of mean and std variables for all subjects
+    ├── tidy_data.txt : synthesised dataset that conforms to 'tidy data' structure
+ ```
+ 
 ==================================
 
 ## File structure
