@@ -19,8 +19,9 @@ The data comes from 30 subjects performing six activities (WALKING, WALKING_UPST
 
 ===================
 ## Variables
-1. The variable 'subjects' denotes the subject number that performed an activity. In total there are 30 subjects.
-2. The second variable 'activity' denotes the possible activity performed by the subject from:
+The variable 'subjects' denotes the subject number that performed an activity. In total there are 30 subjects.
+
+The second variable 'activity' denotes the possible activity performed by the subject from:
 
 * WALKING
 * WALKING_UPSTAIRS
@@ -29,7 +30,7 @@ The data comes from 30 subjects performing six activities (WALKING, WALKING_UPST
 * STANDING
 * LAYING
 
-3. The raw data supplies 561 measurements for each observation of a subject in an activity. This is reduced in the datasetse in 'run_analysis.R' by selecting only the 79 columns that are measures of mean or standard deviation (std) for a measurement type. Variable names were supplied in the 'features.txt' file, those selected for inclusion were modified for readability based on information available in the 'features_info.txt':
+The raw data supplies 561 measurements for each observation of a subject in an activity. This is reduced in the datasetse in 'run_analysis.R' by selecting only the 79 columns that are measures of mean or standard deviation (std) for a measurement type. Variable names were supplied in the 'features.txt' file, those selected for inclusion were modified for readability based on information available in the 'features_info.txt':
 
 As a result:
 * variables beginning with 't' were changed to 'time_'
